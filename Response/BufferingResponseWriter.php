@@ -1,12 +1,12 @@
 <?php
 
-namespace WordPress\HttpServer\ResponseWriter;
+namespace WordPress\HttpServer\Response;
 
 class BufferingResponseWriter implements ResponseWriteStream {
 
 	private $http_code = 200;
-	private $headers   = array();
-	private $body      = '';
+	private $headers = array();
+	private $body = '';
 
 	public function send_http_code( $code ) {
 		$this->http_code = $code;
